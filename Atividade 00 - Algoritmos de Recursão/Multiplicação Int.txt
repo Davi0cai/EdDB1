@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int multInt(int n, int i, int a){
+    if(n < i){
+        return a;
+    }else{
+        return multInt(n, i+1, i*a);
+    }
+}
+
+int mult(int n){
+    if(n == 0){
+        return n;
+    }else{
+        return multInt(n, 1, 1);
+    }
+}
+
+int main()
+{
+    int numero, resul;
+    
+    scanf("%i", &numero);
+    
+    resul = mult(numero);
+    
+    printf("Resultado da multiplicação: %i", resul);
+    
+    return 0;
+}

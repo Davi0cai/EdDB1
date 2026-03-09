@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int fatInt(int n, int i, int a){
+    if(n < i){
+        return a;
+    }else{
+        return fatInt(n, i+1, i*a);
+    }
+}
+
+int fat(int n){
+    return fatInt(n, 1, 1);
+}
+
+int main()
+{
+    int numero, resul;
+    
+    scanf("%i", &numero);
+    
+    resul = fat(numero);
+    
+    printf("Resultado do fatorial: %i", resul);
+    
+    return 0;
+}

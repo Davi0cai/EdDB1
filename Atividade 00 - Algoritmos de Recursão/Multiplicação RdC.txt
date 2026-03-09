@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int multRec(int n, int a){
+    if(n == 0){
+        return a;
+    }else{
+        return multRec(n-1, n*a);
+    }
+}
+
+int mult(int n){
+    if(n == 0){
+        return n;
+    }else{
+        return multRec(n, 1);
+    }
+}
+
+int main()
+{
+    int numero, resul;
+    
+    scanf("%i", &numero);
+    
+    resul = mult(numero);
+    
+    printf("Resultado da multiplicação: %i", resul);
+    
+    return 0;
+}

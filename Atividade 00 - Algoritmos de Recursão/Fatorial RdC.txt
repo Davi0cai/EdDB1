@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int fatRec(int n, int a){
+    if(n == 0){
+        return a;
+    }else{
+        return fatRec(n-1, n*a);
+    }
+}
+
+int fat(int n){
+    return fatRec(n, 1);
+}
+
+int main()
+{
+    int numero, resul;
+    
+    scanf("%i", &numero);
+    
+    resul = fat(numero);
+    
+    printf("Resultado do fatorial: %i", resul);
+    
+    return 0;
+}

@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int somaInt(int n, int i, int a){
+    if(n < i){
+        return a;
+    }else{
+        return somaInt(n, i+1, i+a);
+    }
+}
+
+int soma(int n){
+    return somaInt(n, 0, 0);
+}
+
+int main()
+{
+    int numero, resul;
+    
+    scanf("%i", &numero);
+    
+    resul = soma(numero);
+    
+    printf("Resultado da soma: %i", resul);
+    
+    return 0;
+}
